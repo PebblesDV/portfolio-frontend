@@ -7,5 +7,12 @@ export default async function ProjectDetail({
 }) {
   const project = await getProjectBySlug(params.slug);
 
-  return <div>project: {project.content.rendered}</div>;
+  console.log(project.featured_media);
+
+  return (
+    <div
+      className="prose"
+      dangerouslySetInnerHTML={{ __html: project.content.rendered }}
+    ></div>
+  );
 }

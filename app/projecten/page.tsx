@@ -13,11 +13,15 @@ export default async function Projects() {
   console.log(projects);
 
   return (
-    <div className="">
+    <div className="bg-primary grid grid-cols-2 gap-4 py-4">
       {projects.length > 0 &&
         projects.map((project) => {
           return (
-            <Link href={`/projecten/${project.slug}`} key={project.id}>
+            <Link
+              className="bg-orange-200"
+              href={`/projecten/${project.slug}`}
+              key={project.id}
+            >
               <p>{project.title.rendered}</p>
             </Link>
           );

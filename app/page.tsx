@@ -1,9 +1,9 @@
 export default async function Home() {
   return (
-    <main className="">
-      <div className="flex flex-col m-auto">
+    <main className="my-20">
+      <div className="flex flex-col items-center gap-5">
         <p className="font-bold text-2xl w-2/5 text-center">
-          Student
+          Student{" "}
           <span className="text-primary">&#123;Web-Development&#125;</span> aan
           het Grafisch Lyceum Utrecht
         </p>

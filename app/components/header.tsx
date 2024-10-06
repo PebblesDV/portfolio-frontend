@@ -3,15 +3,15 @@ import Link from "next/link";
 const links = [
   {
     name: "Over",
-    href: "over-mij",
+    href: "/over-mij",
   },
   {
     name: "Projecten",
-    href: "projecten",
+    href: "/projecten",
   },
   {
     name: "Contact",
-    href: "contact",
+    href: "/contact",
   },
 ];
 
