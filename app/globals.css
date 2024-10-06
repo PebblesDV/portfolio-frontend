@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,15 +6,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #9042f5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #151515;
     --foreground: #ededed;
-    --primary: #9042f5;
   }
+}
+
+* {
+  font-family: "Fira Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-size: 16px;
 }
 
 body {

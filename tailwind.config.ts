@@ -7,11 +7,24 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      firaMono: ['"Fira Mono"', 'monospace']
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "3rem",
+        sm: "1rem",
+      },
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "var(--primary)"
+        primary: "#25abf2"
       },
     },
   },

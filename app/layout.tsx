@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
 import BodyWithBackground from "./components/bodyWithBackground";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -27,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <BodyWithBackground
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
+      <BodyWithBackground className={`antialiased min-h-screen container`}>
         <Header />
         {children}
       </BodyWithBackground>
