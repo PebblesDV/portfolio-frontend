@@ -25,7 +25,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#25abf2",
+        primaryHover: "#2885BA",
         cards: '#3C3C3C'
+      },
+      dropShadow: {
+        'custom-blue': '0 4px 1px rgba(26,118,168,1)',
+        'custom-gray': '0 4px 1px rgba(40,40,40,1)'
       },
     },
   },
