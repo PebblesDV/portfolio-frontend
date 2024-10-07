@@ -15,20 +15,23 @@ export default async function Projects() {
 
   return (
     <div className="grid grid-cols-2 gap-4 py-4">
-      <Card />
-
-      {/* {projects.length > 0 &&
+      {projects.length > 0 &&
         projects.map((project) => {
           return (
-            <Link
-              className="bg-orange-200"
-              href={`/projecten/${project.slug}`}
+            <Card
               key={project.id}
-            >
-              <p>{project.title.rendered}</p>
-            </Link>
+              title={project.title.rendered}
+              href={`/projecten/${project.slug}`}
+            />
+            // <Link
+            //   className="bg-orange-200"
+            //   href={`/projecten/${project.slug}`}
+            //   key={project.id}
+            // >
+            //   <p>{project.title.rendered}</p>
+            // </Link>
           );
-        })} */}
+        })}
     </div>
   );
 }

@@ -26,8 +26,8 @@ export default async function Home() {
       </div>
 
       <div className="grid grid-cols-2 w-full gap-7">
-        <Card />
-        <Card />
+        <Card title="Projecten" href="/projecten" />
+        <Card title="Over mij" href="/over-mij" />
       </div>
     </main>
   );

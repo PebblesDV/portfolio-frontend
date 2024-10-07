@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card() {
+export default function Card({ title, href }: { title: string; href: string }) {
   return (
-    <Link href={"projecten"} className="drop-shadow-custom-gray group">
+    <Link href={href} className="drop-shadow-custom-gray group">
       <div className="w-full rounded-t-2xl overflow-hidden">
         <Image
           src="/code.webp"
@@ -22,7 +22,7 @@ export default function Card() {
       </div>
 
       <div className="bg-cards rounded-b-2xl flex justify-between px-5 py-2">
-        <p className="text-lg font-medium">Projecten</p>
+        <p className="text-lg font-medium">{title}</p>
         <Image
           src="/arrow-right.svg"
           width={20}
