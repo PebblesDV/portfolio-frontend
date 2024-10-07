@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function Projects() {
   const projects = await getAllProjects();
   return (
-    <div className="grid grid-cols-2 gap-7 mt-14">
+    <div className="grid grid-cols-2 gap-7 p-12">
       {projects.length > 0 &&
         projects.map((project) => {
           return (
