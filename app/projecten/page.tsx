@@ -1,6 +1,5 @@
 import { getAllProjects } from "@/lib/wordpress";
 import { Metadata } from "next";
-// import Link from "next/link";
 import Card from "../components/card";
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 export default async function Projects() {
   const projects = await getAllProjects();
   return (
-    <div className="grid grid-cols-2 gap-7 p-12">
+    <div className="grid grid-cols-2 gap-7 py-12">
       {projects.length > 0 &&
         projects.map((project) => {
           return (
