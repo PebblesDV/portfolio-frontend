@@ -10,11 +10,8 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   const projects = await getAllProjects();
-
-  console.log(projects);
-
   return (
-    <div className="grid grid-cols-2 gap-4 py-4">
+    <div className="grid grid-cols-2 gap-7 mt-14">
       {projects.length > 0 &&
         projects.map((project) => {
           return (
@@ -23,13 +20,6 @@ export default async function Projects() {
               title={project.title.rendered}
               href={`/projecten/${project.slug}`}
             />
-            // <Link
-            //   className="bg-orange-200"
-            //   href={`/projecten/${project.slug}`}
-            //   key={project.id}
-            // >
-            //   <p>{project.title.rendered}</p>
-            // </Link>
           );
         })}
     </div>
