@@ -1,8 +1,10 @@
+import Card from "./components/card";
+
 export default async function Home() {
   return (
     <main className="my-20">
       <div className="flex flex-col items-center gap-5">
-        <p className="font-bold text-2xl w-2/5 text-center">
+        <p className="font-extrabold text-2xl w-2/5 text-center">
           Student{" "}
           <span className="text-primary">&#123;Web-Development&#125;</span> aan
           het Grafisch Lyceum Utrecht
@@ -15,7 +17,9 @@ export default async function Home() {
         </p>
       </div>
 
-      <div></div>
+      <div>
+        <Card />
+      </div>
     </main>
   );
 }

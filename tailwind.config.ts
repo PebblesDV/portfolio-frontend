@@ -24,7 +24,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#25abf2"
+        primary: "#25abf2",
+        cards: '#3C3C3C'
       },
     },
   },
