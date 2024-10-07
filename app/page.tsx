@@ -19,7 +19,7 @@ export default async function Home() {
 
         <Link
           href={"contact"}
-          className="bg-primary px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200"
+          className="bg-primary px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
         >
           Contact
         </Link>
