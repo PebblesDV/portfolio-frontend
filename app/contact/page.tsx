@@ -12,7 +12,8 @@ export default async function Contact() {
         </div>
 
         <Link
-          href={"/"}
+          href={"https://www.linkedin.com/in/pebbles-de-vries-999550292/"}
+          target="_blank"
           className="bg-primary px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
         >
           LinkedIn
