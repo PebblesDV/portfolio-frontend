@@ -1,6 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const links = [
+  {
+    social: "pebblesdevries@gmail.com",
+    href: "mailto:pebblesdevries@gmail.com",
+    image: "/mail.svg",
+  },
+  {
+    social: "+31 6 50 87 80 66",
+    href: "tel:+31650878066",
+    image: "/phone.svg",
+  },
+];
+
 export default async function Contact() {
   return (
     <main className="flex gap-24 items-center justify-center flex-1">
@@ -36,15 +49,24 @@ export default async function Contact() {
         />
 
         <div className="flex flex-col gap-2">
-          <Link href={"mailto:pebblesdevries@gmail"} className="flex gap-3">
-            <Image src="/mail.svg" alt="mail" width={20} height={20} />
-            <p>pebblesdevries@gmail.com</p>
-          </Link>
-
-          <Link href={"tel:+31650878066"} className="flex gap-3">
-            <Image src="/phone.svg" alt="phone" width={20} height={20} />
-            <p>+31 6 50 87 80 66</p>
-          </Link>
+          {links.map((link) => {
+            return (
+              <Link
+                key={link.social}
+                href={link.href}
+                className="flex gap-3 group border-b border-transparent hover:border-white transition duration-200 w-fit"
+              >
+                <Image
+                  src={link.image}
+                  alt="mail"
+                  width={20}
+                  height={20}
+                  className="group-hover:animate-jump"
+                />
+                <p>{link.social}</p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </main>

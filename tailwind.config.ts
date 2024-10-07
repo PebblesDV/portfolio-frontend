@@ -32,6 +32,15 @@ const config: Config = {
         'custom-blue': '0 4px 1px rgba(26,118,168,1)',
         'custom-gray': '0 4px 1px rgba(40,40,40,1)'
       },
+      keyframes: {
+        jump: {
+          '0%, 100%': { transform: 'translateY(0)', easing: 'ease-in-out' }, 
+          '50%': { transform: 'translateY(-5px)' },
+        }
+      },
+      animation: {
+        jump: 'jump 0.8s cubic-bezier(0.42, 0, 0.58, 1) infinite',
+      }
     },
   },
   plugins: [
