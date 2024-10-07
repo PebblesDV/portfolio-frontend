@@ -1,6 +1,7 @@
 import { getAllProjects } from "@/lib/wordpress";
 import { Metadata } from "next";
-import Link from "next/link";
+// import Link from "next/link";
+import Card from "../components/card";
 
 export const metadata: Metadata = {
   title: "Projecten",
@@ -13,8 +14,10 @@ export default async function Projects() {
   console.log(projects);
 
   return (
-    <div className="bg-primary grid grid-cols-2 gap-4 py-4">
-      {projects.length > 0 &&
+    <div className="grid grid-cols-2 gap-4 py-4">
+      <Card />
+
+      {/* {projects.length > 0 &&
         projects.map((project) => {
           return (
             <Link
@@ -25,7 +28,7 @@ export default async function Projects() {
               <p>{project.title.rendered}</p>
             </Link>
           );
-        })}
+        })} */}
     </div>
   );
 }
