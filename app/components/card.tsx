@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Tag from "./tag";
 
 export default function Card({ title, href }: { title: string; href: string }) {
   return (
@@ -21,15 +22,17 @@ export default function Card({ title, href }: { title: string; href: string }) {
         />
       </div>
 
-      <div className="bg-cards rounded-b-2xl flex justify-between px-5 py-2">
-        <p className="text-lg font-medium">{title}</p>
-        <Image
-          src="/arrow-right.svg"
-          width={20}
-          height={20}
-          alt="arrow"
-          className="group-hover:-rotate-45 transition-transform duration-200"
-        />
+      <div className="bg-cards rounded-b-2xl px-5 py-2">
+        <div className="flex justify-between">
+          <p className="text-lg font-medium">{title}</p>
+          <Image
+            src="/arrow-right.svg"
+            width={20}
+            height={20}
+            alt="arrow"
+            className="group-hover:-rotate-45 transition-transform duration-200"
+          />
+        </div>
       </div>
     </Link>
   );

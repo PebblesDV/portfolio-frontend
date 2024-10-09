@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Tag from "../components/tag";
 
 export default async function About() {
   return (
-    <main>
+    <main className="w-2/3 flex self-center flex-1 justify-center flex-col gap-24 py-5">
       <div className="flex items-center justify-center gap-10">
         <Image
           src="/pebbles.png"
@@ -13,12 +14,12 @@ export default async function About() {
           sizes="100vw"
           style={{
             objectFit: "cover",
-            width: "250px",
-            height: "250px",
+            width: "220px",
+            height: "220px",
           }}
         />
 
-        <div className="flex flex-col w-2/4">
+        <div className="flex flex-col">
           <p className="font-bold text-2xl">Hallo</p>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
@@ -29,9 +30,9 @@ export default async function About() {
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex flex-col">
-          <p>Test</p>
+      <div className="grid grid-cols-3 gap-10 items-baseline">
+        <div className="flex flex-col col-span-2">
+          <p className="font-bold text-2xl">Test</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
             officiis fugit modi vero molestias distinctio perferendis
@@ -40,14 +41,17 @@ export default async function About() {
           </p>
         </div>
 
-        <div className="flex flex-col">
-          <p>Test</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            similique assumenda voluptatem ab corrupti quidem nihil. Accusantium
-            tempore quidem error blanditiis, aut provident facilis a distinctio.
-            Illum provident alias odit!
-          </p>
+        <div className="flex gap-2 flex-wrap h-fit">
+          <Tag title="TESTEN" />
+          <Tag title="NOG EENTJE" />
+          <Tag title="BIEP" />
+          <Tag title="IK WEET HET NIET" />
+          <Tag title="YIPPEE" />
+          <Tag title="BAL" />
+          <Tag title="BLOEP" />
+          <Tag title="HUPLAKEE" />
+          <Tag title="PATAT" />
+          <Tag title="JA DOE NOG MAAR EENTJE" />
         </div>
       </div>
     </main>
