@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "./tag";
 
 export default function Card({ title, href }: { title: string; href: string }) {
   return (
