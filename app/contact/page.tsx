@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import FotoPebbles from "@/public/pebbles.png";
 
 const links = [
   {
@@ -35,7 +36,7 @@ export default async function Contact() {
 
       <div className="flex flex-col items-center bg-cards px-12 py-6 rounded-2xl gap-6 drop-shadow-custom-gray">
         <Image
-          src="/pebbles.png"
+          src={FotoPebbles}
           alt="pebbles"
           width={0}
           height={0}
@@ -46,6 +47,7 @@ export default async function Contact() {
             width: "180px",
             height: "180px",
           }}
+          placeholder="blur"
         />
 
         <div className="flex flex-col gap-2">

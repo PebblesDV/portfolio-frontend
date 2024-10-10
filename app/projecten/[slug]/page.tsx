@@ -1,11 +1,12 @@
 import Tag from "@/app/components/tag";
 import Image from "next/image";
+import FotoCode from "@/public/code.webp";
 
 export default function projectDetail() {
   return (
     <main className="flex flex-col gap-16 py-10">
       <Image
-        src="/code.webp"
+        src={FotoCode}
         alt="banner"
         width={0}
         height={0}
@@ -15,6 +16,7 @@ export default function projectDetail() {
           objectFit: "cover",
           height: "300px",
         }}
+        placeholder="blur"
       />
 
       <div className="grid grid-cols-3 gap-20 px-16 items-center">
@@ -47,13 +49,14 @@ export default function projectDetail() {
 
       <div className="grid grid-cols-3 gap-20 px-16 items-center">
         <Image
-          src="/code.webp"
+          src={FotoCode}
           alt="project"
           width={0}
           height={0}
           className="w-full rounded-2xl"
           sizes="100vw"
           style={{ objectFit: "cover", height: "250px" }}
+          placeholder="blur"
         />
 
         <div className="flex flex-col gap-1 col-span-2">

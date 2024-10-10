@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import CardFoto from "@/public/code.webp";
 
 export default function Card({ title, href }: { title: string; href: string }) {
   return (
     <Link href={href} className="drop-shadow-custom-gray group">
       <div className="w-full rounded-t-2xl overflow-hidden">
         <Image
-          src="/code.webp"
+          src={CardFoto}
           width={0}
           height={0}
           alt="card-img"
@@ -18,6 +19,7 @@ export default function Card({ title, href }: { title: string; href: string }) {
             borderRadius: "20px 20px 0px 0px",
           }}
           className="group-hover:scale-105 transition duration-200"
+          placeholder="blur"
         />
       </div>
 
