@@ -56,6 +56,31 @@ export default async function About() {
       </div> */}
 
       <div className="grid grid-cols-3 gap-20 items-center">
+        <Image
+          src="/pebbles.png"
+          alt="pebbles"
+          width={0}
+          height={0}
+          className="rounded-full"
+          sizes="100vw"
+          style={{ objectFit: "cover", height: "250px", width: "250px" }}
+        />
+
+        <div className="flex flex-col gap-1 col-span-2">
+          <p className="text-2xl font-bold">Hoi ik ben pebl</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+            quia nobis quo, ea veritatis earum, deserunt eos beatae voluptate
+            ipsum temporibus! Reiciendis odio minus at hic facere aliquid cumque
+            totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Tempora quia nobis quo, ea veritatis earum, deserunt eos beatae
+            voluptate ipsum temporibus! Reiciendis odio minus at hic facere
+            aliquid cumque totam!
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-20 items-center">
         <div className="flex flex-col gap-1 col-span-2">
           <p className="text-2xl font-bold">Hoi ik ben pebl</p>
           <p>
@@ -80,31 +105,6 @@ export default async function About() {
           <Tag title="HUPLAKEE" />
           <Tag title="PATAT" />
           <Tag title="JA DOE NOG MAAR EENTJE" />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-3 gap-20 items-center">
-        <Image
-          src="/pebbles.png"
-          alt="pebbles"
-          width={0}
-          height={0}
-          className="rounded-full self-center"
-          sizes="100vw"
-          style={{ objectFit: "cover", height: "250px", width: "250px" }}
-        />
-
-        <div className="flex flex-col gap-1 col-span-2">
-          <p className="text-2xl font-bold">Hoi ik ben pebl</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-            quia nobis quo, ea veritatis earum, deserunt eos beatae voluptate
-            ipsum temporibus! Reiciendis odio minus at hic facere aliquid cumque
-            totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Tempora quia nobis quo, ea veritatis earum, deserunt eos beatae
-            voluptate ipsum temporibus! Reiciendis odio minus at hic facere
-            aliquid cumque totam!
-          </p>
         </div>
       </div>
     </main>
