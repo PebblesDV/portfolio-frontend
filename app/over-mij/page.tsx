@@ -17,6 +17,8 @@ export default async function About() {
             width: "220px",
             height: "220px",
           }}
+          placeholder="blur"
+          blurDataURL="/pebbles.png"
         />
 
         <div className="flex flex-col">
