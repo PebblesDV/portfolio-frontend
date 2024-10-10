@@ -15,8 +15,6 @@ export default function projectDetail() {
           objectFit: "cover",
           height: "300px",
         }}
-        placeholder="blur"
-        blurDataURL="/code.webp"
       />
 
       <div className="grid grid-cols-3 gap-20 px-16 items-center">
