@@ -14,7 +14,7 @@ export default async function Home() {
         <p className="w-3/5 text-center">
           Hoi! Ik ben Pebbles de Vries, een MBO Web-Development student. Welkom
           bij mijn portfolio. Hier laat ik projecten zien waar ik trots op ben,
-          en die goed aantonen wat ik tot nu toe kan en waar ik mee bezig ben!
+          en die goed aantonen wat ik tot nu toe kan!
         </p>
 
         <Link
