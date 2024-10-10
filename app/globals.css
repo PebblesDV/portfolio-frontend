@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #101010;
+    --background: #0e0e0e;
     --foreground: #ededed;
   }
 }
@@ -36,7 +36,7 @@ body {
   min-height: 100vh;
   /* background-color: #000; */
   background-size: 150%;
-  background-image: url("/stars2.png"), radial-gradient(circle at top right, rgba(121, 68, 154, 0.08), transparent),
+  background-image: url("/stars3.png"), radial-gradient(circle at top right, rgba(121, 68, 154, 0.08), transparent),
       radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.08), transparent)
 }
 
