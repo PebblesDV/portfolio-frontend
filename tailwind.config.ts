@@ -12,15 +12,18 @@ const config: Config = {
     },
     container: {
       center: true,
-      padding: {
-        DEFAULT: "3rem",
-        sm: "1rem",
-      },
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "100%"
+          }
+        }
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

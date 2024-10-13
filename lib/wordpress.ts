@@ -5,7 +5,24 @@ import {
   Post,
   Page,
   FeaturedMedia,
+  Tag,
 } from "./wordpress.d";
+
+interface PostWithAcf extends Post {
+  acf: {
+    top_content:{
+      content: string;
+    },
+    middle_content:{
+      afbeelding: string | number;
+      content: string;
+    }
+    bottom_content:{
+      afbeelding: string | number;
+      content: string;
+    }
+  }
+}
 
 const baseUrl = process.env.WORDPRESS_URL;
 
@@ -26,10 +43,10 @@ export async function getAllProjects(filterParams?: {
   return posts;
 }
 
-export async function getProjectBySlug(slug: string): Promise<Post> {
+export async function getProjectBySlug(slug: string): Promise<PostWithAcf> {
   const url = getUrl("/wp-json/wp/v2/projects", { slug });
   const response = await fetch(url);
-  const post: Post[] = await response.json();
+  const post: PostWithAcf[] = await response.json();
   return post[0];
 }
 
@@ -53,4 +70,19 @@ export async function getFeaturedMediaById(id: number): Promise<FeaturedMedia> {
   const response = await fetch(url);
   const featuredMedia: FeaturedMedia = await response.json();
   return featuredMedia;
+}
+
+export async function getAllTags(): Promise<Tag[]> {
+  const url = getUrl("/wp-json/wp/v2/tags");
+  const response = await fetch(url);
+  const tags: Tag[] = await response.json();
+  return tags;
+}
+
+export async function getTagsByIds(ids: number[]): Promise<Tag[]> {
+  const idString = ids.join(','); // Convert array of IDs to a comma-separated string
+  const url = getUrl('/wp-json/custom/v1/tags', { ids: idString });
+  const response = await fetch(url);
+  const tags: Tag[] = await response.json();
+  return tags;
 }

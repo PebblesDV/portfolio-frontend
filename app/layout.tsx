@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <BodyWithBackground className={`antialiased min-h-screen container`}>
+      <BodyWithBackground className={`antialiased min-h-dvh container`}>
         <Header />
         {children}
       </BodyWithBackground>

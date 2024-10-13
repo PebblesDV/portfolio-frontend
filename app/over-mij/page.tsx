@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Tag from "../components/tag";
 import FotoPebbles from "@/public/pebbles.png";
+import { getAllTags } from "@/lib/wordpress";
 
 export default async function About() {
+  const tags = await getAllTags();
   return (
     <main className="flex self-center flex-1 justify-center flex-col gap-24 py-5 px-32">
       <div className="grid grid-cols-3 gap-20 items-center">
@@ -46,16 +48,10 @@ export default async function About() {
         </div>
 
         <div className="flex gap-2 flex-wrap h-fit">
-          <Tag title="TESTEN" />
-          <Tag title="NOG EENTJE" />
-          <Tag title="BIEP" />
-          <Tag title="IK WEET HET NIET" />
-          <Tag title="YIPPEE" />
-          <Tag title="BAL" />
-          <Tag title="BLOEP" />
-          <Tag title="HUPLAKEE" />
-          <Tag title="PATAT" />
-          <Tag title="JA DOE NOG MAAR EENTJE" />
+          {tags.length > 0 &&
+            tags.map((tag) => {
+              return <Tag title={tag.name} key={tag.id} />;
+            })}
         </div>
       </div>
     </main>
