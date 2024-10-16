@@ -15,8 +15,6 @@ export default async function projectDetail({
   const banner = await getFeaturedMediaById(project.featured_media);
   const tags = await getTagsByIds(project.tags);
 
-  console.log(tags);
-
   return (
     <main className="flex flex-col gap-16 py-10">
       <Image

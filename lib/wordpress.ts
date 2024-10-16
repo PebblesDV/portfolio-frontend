@@ -10,7 +10,8 @@ import {
 
 interface PostWithAcf extends Post {
   acf: {
-    top_content:{
+    card_image: string | number; 
+    top_content:{ 
       content: string;
     },
     middle_content:{
@@ -36,12 +37,13 @@ export async function getAllProjects(filterParams?: {
   author?: string;
   tag?: string;
   category?: string;
-}): Promise<Post[]> {  
+}): Promise<PostWithAcf[]> { 
   const url = getUrl("/wp-json/wp/v2/projects", { author: filterParams?.author, tags: filterParams?.tag, categories: filterParams?.category });
   const response = await fetch(url);
-  const posts: Post[] = await response.json();
+  const posts: PostWithAcf[] = await response.json(); 
   return posts;
 }
+//even naar page.tsx van project
 
 export async function getProjectBySlug(slug: string): Promise<PostWithAcf> {
   const url = getUrl("/wp-json/wp/v2/projects", { slug });

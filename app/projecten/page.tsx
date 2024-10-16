@@ -1,6 +1,7 @@
-import { getAllProjects } from "@/lib/wordpress";
+import { getAllProjects, getFeaturedMediaById } from "@/lib/wordpress";
 import { Metadata } from "next";
 import Card from "../components/card";
+import FallBackImage from "@/public/code.webp";
 
 export const metadata: Metadata = {
   title: "Projecten",
@@ -9,12 +10,19 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   const projects = await getAllProjects();
+
+  console.log("project", projects[0].id);
   return (
     <div className="grid grid-cols-2 gap-7 py-12">
       {projects.length > 0 &&
-        projects.map((project) => {
+        projects.map(async (project) => {
+          const media =
+            typeof project.acf.card_image === "string"
+              ? FallBackImage
+              : (await getFeaturedMediaById(project.acf.card_image)).source_url;
           return (
             <Card
+              imageSrc={media}
               key={project.id}
               title={project.title.rendered}
               href={`/projecten/${project.slug}`}

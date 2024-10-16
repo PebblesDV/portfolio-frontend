@@ -1,12 +1,35 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import CardFoto from "@/public/code.webp";
+// import CardFoto from "@/public/code.webp";
 
-export default function Card({ title, href }: { title: string; href: string }) {
+export default async function Card({
+  title,
+  href,
+  imageSrc,
+}: {
+  title: string;
+  href: string;
+  imageSrc: string | StaticImageData;
+}) {
   return (
     <Link href={href} className="drop-shadow-custom-gray group">
       <div className="w-full rounded-t-2xl overflow-hidden">
         <Image
+          src={imageSrc}
+          alt="card-img"
+          width={0}
+          height={0}
+          className="group-hover:scale-105 transition duration-200"
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "250px",
+            objectFit: "cover",
+            borderRadius: "20px 20px 0px 0px",
+          }}
+        />
+
+        {/* <Image
           src={CardFoto}
           width={0}
           height={0}
@@ -20,7 +43,7 @@ export default function Card({ title, href }: { title: string; href: string }) {
           }}
           className="group-hover:scale-105 transition duration-200"
           placeholder="blur"
-        />
+        /> */}
       </div>
 
       <div className="bg-cards rounded-b-2xl px-5 py-2">
