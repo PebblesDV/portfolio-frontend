@@ -6,8 +6,8 @@ import { getAllTags } from "@/lib/wordpress";
 export default async function About() {
   const tags = await getAllTags();
   return (
-    <main className="flex self-center flex-1 justify-center flex-col gap-24 py-5 px-32">
-      <div className="grid grid-cols-3 gap-20 items-center">
+    <main className="flex self-center flex-1 justify-center flex-col gap-24 py-5 px-5 md:px-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
         <Image
           src={FotoPebbles}
           alt="pebbles"
@@ -19,7 +19,7 @@ export default async function About() {
           placeholder="blur"
         />
 
-        <div className="flex flex-col gap-1 col-span-2">
+        <div className="flex flex-col gap-1 md:col-span-2">
           <p className="text-2xl font-bold">Hoi ik ben pebl</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
@@ -33,8 +33,8 @@ export default async function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-20 items-center">
-        <div className="flex flex-col gap-1 col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+        <div className="flex flex-col gap-1 md:col-span-2">
           <p className="text-2xl font-bold">Hoi ik ben pebl</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora

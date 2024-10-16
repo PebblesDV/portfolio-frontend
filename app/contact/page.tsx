@@ -17,10 +17,10 @@ const links = [
 
 export default async function Contact() {
   return (
-    <main className="flex gap-24 items-center justify-center flex-1">
+    <main className="flex flex-col md:flex-row gap-20 md:gap-24 items-center justify-center flex-1 py-10">
       <div className="flex flex-col items-center gap-3">
-        <p className="text-2xl font-bold">Get in touch!</p>
-        <div className="text-center">
+        <p className="text-xl md:text-2xl font-bold">Get in touch!</p>
+        <div className="text-center text-sm md:text-base">
           <p>Meer weten over mij en wat ik doe?</p>
           <p>Neem contact met mij op!</p>
         </div>
@@ -28,13 +28,13 @@ export default async function Contact() {
         <Link
           href={"https://www.linkedin.com/in/pebbles-de-vries-999550292/"}
           target="_blank"
-          className="bg-primary px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
+          className="bg-primary text-sm md:text-base px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
         >
           LinkedIn
         </Link>
       </div>
 
-      <div className="flex flex-col items-center bg-cards px-12 py-6 rounded-2xl gap-6 drop-shadow-custom-gray">
+      <div className="flex flex-col items-center bg-cards px-5 md:px-12 py-4 md:py-6 rounded-2xl gap-6 drop-shadow-custom-gray">
         <Image
           src={FotoPebbles}
           alt="pebbles"
@@ -56,7 +56,7 @@ export default async function Contact() {
               <Link
                 key={link.social}
                 href={link.href}
-                className="flex gap-3 group border-b border-transparent hover:border-white transition duration-200 w-fit"
+                className="flex text-sm md:text-base gap-3 group border-b border-transparent hover:border-white transition duration-200 w-fit"
               >
                 <Image
                   src={link.image}

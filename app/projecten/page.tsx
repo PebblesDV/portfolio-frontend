@@ -13,7 +13,7 @@ export default async function Projects() {
 
   console.log("project", projects[0].id);
   return (
-    <div className="grid grid-cols-2 gap-7 py-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-7 py-12">
       {projects.length > 0 &&
         projects.map(async (project) => {
           const media =
