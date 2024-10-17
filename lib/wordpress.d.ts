@@ -43,6 +43,20 @@ export type Post = {
   meta: any[];
   categories: number[];
   tags: number[];
+  acf: {
+    card_image: string | number; 
+    top_content:{ 
+      content: string;
+    },
+    middle_content:{
+      afbeelding: string | number;
+      content: string;
+    }
+    bottom_content:{
+      afbeelding: string | number;
+      content: string;
+    }
+  }
 };
 
 export type Category = {
@@ -58,6 +72,7 @@ export type Category = {
 };
 
 export type Tag = {
+  term_id: number;
   id: number;
   count: number;
   description: string;

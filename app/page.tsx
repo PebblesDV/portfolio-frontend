@@ -26,8 +26,8 @@ export default async function Home() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 md:gap-7">
-        <Card title="Projecten" href="/projecten" imageSrc={""} />
-        <Card title="Over mij" href="/over-mij" imageSrc={""} />
+        <Card title="Projecten" href="/projecten" imageSrc="/code.webp" />
+        <Card title="Over mij" href="/over-mij" imageSrc="/pebbles.png" />
       </div>
     </main>
   );

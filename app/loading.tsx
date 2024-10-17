@@ -1,5 +1,9 @@
 import { Loader } from "react-feather";
 
 export default function Loading() {
-  return <Loader className="animate-spin" />;
+  return (
+    <div className="flex justify-center items-center flex-1">
+      <Loader className="animate-spin" />
+    </div>
+  );
 }

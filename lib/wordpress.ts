@@ -8,23 +8,6 @@ import {
   Tag,
 } from "./wordpress.d";
 
-interface PostWithAcf extends Post {
-  acf: {
-    card_image: string | number; 
-    top_content:{ 
-      content: string;
-    },
-    middle_content:{
-      afbeelding: string | number;
-      content: string;
-    }
-    bottom_content:{
-      afbeelding: string | number;
-      content: string;
-    }
-  }
-}
-
 const baseUrl = process.env.WORDPRESS_URL;
 
 function getUrl(path: string, query?: Record<string, any>) {
@@ -37,18 +20,17 @@ export async function getAllProjects(filterParams?: {
   author?: string;
   tag?: string;
   category?: string;
-}): Promise<PostWithAcf[]> { 
+}): Promise<Post[]> { 
   const url = getUrl("/wp-json/wp/v2/projects", { author: filterParams?.author, tags: filterParams?.tag, categories: filterParams?.category });
   const response = await fetch(url);
-  const posts: PostWithAcf[] = await response.json(); 
+  const posts: Post[] = await response.json(); 
   return posts;
 }
-//even naar page.tsx van project
 
-export async function getProjectBySlug(slug: string): Promise<PostWithAcf> {
+export async function getProjectBySlug(slug: string): Promise<Post> {
   const url = getUrl("/wp-json/wp/v2/projects", { slug });
   const response = await fetch(url);
-  const post: PostWithAcf[] = await response.json();
+  const post: Post[] = await response.json();
   return post[0];
 }
 

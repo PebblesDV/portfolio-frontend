@@ -43,7 +43,7 @@ export default async function projectDetail({
         <div className="flex gap-2 flex-wrap h-fit">
           {tags.length > 0 &&
             tags.map((tag) => {
-              return <Tag title={tag.name} key={tag.id} />;
+              return <Tag title={tag.name} key={tag.term_id} />;
             })}
         </div>
       </div>
