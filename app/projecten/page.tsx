@@ -14,11 +14,13 @@ export default async function Projects() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-7 py-12">
       {projects.length > 0 &&
         projects.map(async (project) => {
-          const media = project.acf.card_image
-            ? typeof project.acf.card_image === "string"
-              ? FallBackImage
-              : (await getFeaturedMediaById(project.acf.card_image)).source_url
-            : FallBackImage;
+          const media =
+            project && project.acf && project.acf.card_image
+              ? typeof project.acf.card_image === "string"
+                ? FallBackImage
+                : (await getFeaturedMediaById(project.acf.card_image))
+                    .source_url
+              : FallBackImage;
           return (
             <Card
               imageSrc={media}
