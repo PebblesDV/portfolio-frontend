@@ -10,16 +10,15 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   const projects = await getAllProjects();
-
-  console.log("project", projects[0].id);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-7 py-12">
       {projects.length > 0 &&
         projects.map(async (project) => {
-          const media =
-            typeof project.acf.card_image === "string"
+          const media = project.acf.card_image
+            ? typeof project.acf.card_image === "string"
               ? FallBackImage
-              : (await getFeaturedMediaById(project.acf.card_image)).source_url;
+              : (await getFeaturedMediaById(project.acf.card_image)).source_url
+            : FallBackImage;
           return (
             <Card
               imageSrc={media}
