@@ -17,7 +17,7 @@ const links = [
 
 export default async function Contact() {
   return (
-    <main className="flex flex-col md:flex-row gap-20 md:gap-24 items-center justify-center flex-1 py-10">
+    <main className="flex flex-col md:flex-row gap-14 md:gap-24 items-center justify-center flex-1 py-10">
       <div className="flex flex-col items-center gap-3">
         <p className="text-xl md:text-2xl font-bold">Get in touch!</p>
         <div className="text-center text-sm md:text-base">

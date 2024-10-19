@@ -77,7 +77,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex md:hidden h-fit">
+      <div className="flex md:hidden h-fit z-10">
         <button onClick={() => setIsOpen(true)}>
           <Menu />
         </button>
