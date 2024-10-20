@@ -52,7 +52,8 @@ export default async function About() {
         <div className="flex gap-2 flex-wrap h-fit">
           {tags.length > 0 &&
             tags.map((tag) => {
-              return <Tag title={tag.name} key={tag.term_id} />;
+              console.log(tag);
+              return <Tag title={tag.name} key={tag.id} />;
             })}
         </div>
       </div>

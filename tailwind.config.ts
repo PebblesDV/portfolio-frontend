@@ -29,7 +29,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: "#25abf2",
         primaryHover: "#2885BA",
-        cards: '#3C3C3C'
+        cards: '#3C3C3C',
+        menu: "#15161E"
       },
       dropShadow: {
         'custom-blue': '0 4px 1px rgba(26,118,168,1)',

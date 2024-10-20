@@ -17,18 +17,17 @@ export default async function projectDetail({
 
   return (
     <main className="flex flex-col gap-10 md:gap-16 py-10">
-      <Image
-        src={banner.source_url}
-        alt="banner"
-        width={0}
-        height={0}
-        className="rounded-2xl w-full"
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-          height: "300px",
-        }}
-      />
+      <div className="w-full h-52 md:h-[300px] relative">
+        <Image
+          src={banner.source_url}
+          alt="banner"
+          width={0}
+          height={0}
+          className="rounded-2xl w-full object-cover object-left"
+          sizes="100vw"
+          fill
+        />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-5 md:px-16 items-center">
         <div className="flex flex-col gap-1 md:col-span-2 prose prose-invert prose-h2:m-0">
