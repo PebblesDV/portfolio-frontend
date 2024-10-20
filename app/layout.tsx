@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header";
-import BodyWithBackground from "./components/bodyWithBackground";
+import BackgroundParticles from "./components/backgroundParticles";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -15,10 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <BodyWithBackground className={`antialiased min-h-dvh container`}>
+      <body className="antialiased min-h-dvh container">
+        <BackgroundParticles
+          quantity={600}
+          staticity={30}
+          className="absolute inset-0 -z-10"
+        ></BackgroundParticles>
         <Header />
         {children}
-      </BodyWithBackground>
+      </body>
     </html>
   );
 }
