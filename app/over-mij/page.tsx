@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Tag from "../components/tag";
-import FotoPebbles from "@/public/pebbles.png";
+import FotoPebbles from "@/public/pebbles.jpeg";
 import { getAllTags } from "@/lib/wordpress";
 
 export default async function About() {

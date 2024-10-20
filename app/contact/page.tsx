@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import FotoPebbles from "@/public/pebbles.png";
+import FotoPebbles from "@/public/pebbles.jpeg";
 
 const links = [
   {
