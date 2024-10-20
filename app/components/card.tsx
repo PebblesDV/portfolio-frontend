@@ -11,6 +11,8 @@ export default async function Card({
   href: string;
   imageSrc: string | StaticImageData;
 }) {
+  console.log("image src:", imageSrc);
+
   return (
     <Link href={href} className="drop-shadow-custom-gray group">
       <div className="w-full rounded-t-2xl overflow-hidden">
