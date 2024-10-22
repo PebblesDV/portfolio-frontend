@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,19 +10,47 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0e0e0e;
     --foreground: #ededed;
   }
+}
+
+* {
+  font-family: "Fira Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 16px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-position 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: 130%;
+  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.08), transparent),
+      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.08), transparent)
+}
+
+body.active {
+  transition: background-position 1s ease-out;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.container {
+  @apply px-4 md:px-12
 }
