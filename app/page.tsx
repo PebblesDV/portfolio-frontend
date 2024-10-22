@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Card from "./components/card";
+import FotoPebbles from "@/public/pebbles.jpeg";
+import FotoCode from "@/public/code.webp";
 
 export default async function Home() {
   return (
     <main className="flex flex-col gap-10 lg:gap-12 justify-center flex-1 py-12">
       <div className="flex flex-col items-center gap-3 lg:gap-5">
         <p className="font-extrabold text-xl lg:text-2xl w-full lg:w-2/5 lg:text-center">
-          Student{" "}
+          Studente{" "}
           <span className="text-primary">&#123;Web-Development&#125;</span> aan
           het Grafisch Lyceum Utrecht
         </p>
@@ -26,8 +28,8 @@ export default async function Home() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5 lg:gap-7">
-        <Card title="Projecten" href="/projecten" imageSrc="/code.webp" />
-        <Card title="Over mij" href="/over-mij" imageSrc="/pebbles.jpeg" />
+        <Card title="Projecten" href="/projecten" imageSrc={FotoCode} />
+        <Card title="Over mij" href="/over-mij" imageSrc={FotoPebbles} />
       </div>
     </main>
   );
