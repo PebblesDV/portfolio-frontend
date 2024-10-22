@@ -3,15 +3,15 @@ import Card from "./components/card";
 
 export default async function Home() {
   return (
-    <main className="flex flex-col gap-10 md:gap-12 justify-center flex-1 py-12">
-      <div className="flex flex-col items-center gap-3 md:gap-5">
-        <p className="font-extrabold text-xl md:text-2xl w-full md:w-2/5 md:text-center">
+    <main className="flex flex-col gap-10 lg:gap-12 justify-center flex-1 py-12">
+      <div className="flex flex-col items-center gap-3 lg:gap-5">
+        <p className="font-extrabold text-xl lg:text-2xl w-full lg:w-2/5 lg:text-center">
           Student{" "}
           <span className="text-primary">&#123;Web-Development&#125;</span> aan
           het Grafisch Lyceum Utrecht
         </p>
 
-        <p className="w-full md:w-3/5 md:text-center">
+        <p className="w-full lg:w-3/5 lg:text-center">
           Hoi! Ik ben Pebbles de Vries, een MBO Web-Development student. Welkom
           bij mijn portfolio. Hier laat ik projecten zien waar ik trots op ben,
           en die goed aantonen wat ik tot nu toe kan!
@@ -25,7 +25,7 @@ export default async function Home() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-5 md:gap-7">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5 lg:gap-7">
         <Card title="Projecten" href="/projecten" imageSrc="/code.webp" />
         <Card title="Over mij" href="/over-mij" imageSrc="/pebbles.jpeg" />
       </div>

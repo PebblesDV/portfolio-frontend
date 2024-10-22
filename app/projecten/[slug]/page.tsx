@@ -16,8 +16,8 @@ export default async function projectDetail({
   const tags = await getTagsByIds(project.tags);
 
   return (
-    <main className="flex flex-col gap-10 md:gap-16 py-10">
-      <div className="w-full h-52 md:h-[300px] relative">
+    <main className="flex flex-col gap-10 lg:gap-16 py-10 flex-1 justify-center">
+      <div className="w-full h-52 lg:h-[300px] relative">
         <Image
           src={banner.source_url}
           alt="banner"
@@ -29,8 +29,8 @@ export default async function projectDetail({
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-5 md:px-16 items-center">
-        <div className="flex flex-col gap-1 md:col-span-2 prose prose-invert prose-h2:m-0">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 px-5 lg:px-16 items-center">
+        <div className="flex flex-col gap-1 lg:col-span-2 prose prose-invert prose-h2:m-0">
           <div
             className="flex flex-col gap-1"
             dangerouslySetInnerHTML={{
@@ -47,7 +47,7 @@ export default async function projectDetail({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 px-5 md:px-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 px-5 lg:px-16 items-center">
         {typeof project.acf.middle_content.afbeelding === "number" && (
           <Image
             src={
@@ -66,7 +66,7 @@ export default async function projectDetail({
           />
         )}
 
-        <div className="flex flex-col gap-1 md:col-span-2 prose prose-invert prose-h2:m-0">
+        <div className="flex flex-col gap-1 lg:col-span-2 prose prose-invert prose-h2:m-0">
           <div
             className="flex flex-col gap-1"
             dangerouslySetInnerHTML={{
@@ -78,7 +78,7 @@ export default async function projectDetail({
 
       {project.acf.bottom_content.content !== "" &&
         project.acf.bottom_content.afbeelding !== "" && (
-          <div className="grid grid-cols-3 gap-10 md:gap-20 px-16 items-center">
+          <div className="grid grid-cols-3 gap-10 lg:gap-20 px-16 items-center">
             <div className="flex flex-col gap-1 col-span-2 prose prose-invert prose-h2:m-0">
               <div
                 className="flex flex-col gap-1"

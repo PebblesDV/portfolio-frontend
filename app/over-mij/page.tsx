@@ -6,8 +6,8 @@ import { getAllTags } from "@/lib/wordpress";
 export default async function About() {
   const tags = await getAllTags();
   return (
-    <main className="flex self-center flex-1 justify-center flex-col gap-10 md:gap-24 py-5 px-5 md:px-32">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 items-center">
+    <main className="flex self-center flex-1 justify-center flex-col gap-10 lg:gap-24 py-5 px-5 lg:px-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 items-center">
         <div className="flex items-center justify-center">
           <Image
             src={FotoPebbles}
@@ -21,7 +21,7 @@ export default async function About() {
           />
         </div>
 
-        <div className="flex flex-col gap-1 md:col-span-2">
+        <div className="flex flex-col gap-1 lg:col-span-2">
           <p className="text-2xl font-bold">Wie ben ik?</p>
           <p>
             Hoi! Ik ben Pebbles de Vries, een 21 jarige Web Development
@@ -34,8 +34,8 @@ export default async function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 items-center">
-        <div className="flex flex-col gap-1 md:col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 items-center">
+        <div className="flex flex-col gap-1 lg:col-span-2">
           <p className="text-2xl font-bold">Wat doe/kan ik?</p>
           <p>
             Op dit moment zit ik in het 2e jaar van mijn opleiding. Ik heb tot

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function Projects() {
   const projects = await getAllProjects();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 py-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7 py-12">
       {projects.length > 0 &&
         projects.map(async (project) => {
           const media =
