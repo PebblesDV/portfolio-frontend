@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body className="antialiased min-h-full container">
+      <body className="antialiased min-h-dvh container">
         <BackgroundParticles
           quantity={600}
           staticity={30}
