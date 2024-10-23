@@ -5,11 +5,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Contact",
-  description: "Student Web Development in Aalsmeer - Noord Holland",
+  description: "Student Web Development in Aalsmeer - Noord-Holland",
   openGraph: {
     images: [
       {
-        url: "/code.webp",
+        url: "/public/code.webp",
         width: 1200,
         height: 630,
         alt: "link",
