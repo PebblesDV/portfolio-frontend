@@ -5,6 +5,22 @@ import {
   getProjectBySlug,
   getTagsByIds,
 } from "@/lib/wordpress";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pebbles de Vries - Project",
+  description: "Student Web Development in Aalsmeer - Noord-Holland",
+  openGraph: {
+    images: [
+      {
+        url: "/public/code.webp",
+        width: "600",
+        height: "300",
+        alt: "link",
+      },
+    ],
+  },
+};
 
 export default async function projectDetail({
   params,
