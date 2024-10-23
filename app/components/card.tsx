@@ -13,7 +13,7 @@ export default async function Card({
 }) {
   return (
     <Link href={href} className="drop-shadow-custom-gray group">
-      <div className="w-full rounded-t-2xl overflow-hidden">
+      <div className="w-full lg:h-64 rounded-t-2xl overflow-hidden object-cover">
         <Image
           src={imageSrc}
           alt="card-img"
@@ -23,27 +23,10 @@ export default async function Card({
           sizes="100vw"
           style={{
             width: "100%",
-            height: "250px",
+            height: "100%",
             objectFit: "cover",
-            borderRadius: "20px 20px 0px 0px",
           }}
         />
-
-        {/* <Image
-          src={CardFoto}
-          width={0}
-          height={0}
-          alt="card-img"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "250px",
-            objectFit: "cover",
-            borderRadius: "20px 20px 0px 0px",
-          }}
-          className="group-hover:scale-105 transition duration-200"
-          placeholder="blur"
-        /> */}
       </div>
 
       <div className="bg-cards rounded-b-2xl px-5 py-2">

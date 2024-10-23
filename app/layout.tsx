@@ -15,11 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body className="antialiased min-h-dvh container">
+      <body className="antialiased min-h-dvh relative container">
         <BackgroundParticles
           quantity={600}
           staticity={30}
-          className="absolute inset-0 -z-10"
+          className="fixed inset-0 -z-10"
         ></BackgroundParticles>
         <Header />
         {children}
