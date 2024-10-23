@@ -1,6 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
 import FotoPebbles from "@/public/pebbles.jpeg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pebbles de Vries - Contact",
+  description: "Student Web Development in Aalsmeer - Noord Holland",
+  openGraph: {
+    images: [
+      {
+        url: "public/code.webp",
+        width: 1200,
+        height: 630,
+        alt: "link",
+      },
+    ],
+  },
+};
 
 const links = [
   {
