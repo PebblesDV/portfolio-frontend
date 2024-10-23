@@ -19,7 +19,7 @@ export default async function Card({
           alt="card-img"
           width={0}
           height={0}
-          className="group-hover:scale-105 transition duration-200"
+          className="lg:group-hover:scale-105 transition duration-200"
           sizes="100vw"
           style={{
             width: "100%",
@@ -37,7 +37,7 @@ export default async function Card({
             width={20}
             height={20}
             alt="arrow"
-            className="group-hover:-rotate-45 transition-transform duration-200"
+            className="lg:group-hover:-rotate-45 transition-transform duration-200"
           />
         </div>
       </div>

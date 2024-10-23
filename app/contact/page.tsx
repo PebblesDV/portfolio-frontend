@@ -44,7 +44,7 @@ export default async function Contact() {
         <Link
           href={"https://www.linkedin.com/in/pebbles-de-vries-999550292/"}
           target="_blank"
-          className="bg-primary text-sm lg:text-base px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
+          className="bg-primary text-sm lg:text-base px-6 py-1 w-fit rounded-2xl drop-shadow-custom-blue self-center lg:hover:bg-primaryHover active:scale-90 transition duration-200 font-semibold"
         >
           LinkedIn
         </Link>
@@ -72,14 +72,14 @@ export default async function Contact() {
               <Link
                 key={link.social}
                 href={link.href}
-                className="flex text-sm lg:text-base gap-3 group border-b border-transparent hover:border-white transition duration-200 w-fit"
+                className="flex text-sm lg:text-base gap-3 group border-b border-transparent lg:hover:border-white transition duration-200 w-fit"
               >
                 <Image
                   src={link.image}
                   alt="mail"
                   width={20}
                   height={20}
-                  className="group-hover:animate-jump"
+                  className="lg:group-hover:animate-jump"
                 />
                 <p>{link.social}</p>
               </Link>
