@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/public/code.webp",
-        width: "1200",
-        height: "630",
+        width: "600",
+        height: "300",
         alt: "link",
       },
     ],
