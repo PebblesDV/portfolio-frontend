@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/public/code.webp",
+        url: "/code.webp",
         width: 1200,
         height: 630,
         alt: "link",
