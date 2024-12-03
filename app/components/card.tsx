@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-// import CardFoto from "@/public/code.webp";
 
 export default async function Card({
   title,
