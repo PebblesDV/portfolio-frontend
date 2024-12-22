@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header";
 import BackgroundParticles from "./components/backgroundParticles";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -23,6 +24,7 @@ export default function RootLayout({
         ></BackgroundParticles>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
