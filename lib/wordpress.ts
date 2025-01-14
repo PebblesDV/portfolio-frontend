@@ -35,28 +35,28 @@ export async function getProjectBySlug(slug: string): Promise<Post> {
 
 export async function getAllPages(): Promise<Page[]> {
   const url = getUrl("/wp-json/wp/v2/pages");
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 120 } });
   const pages: Page[] = await response.json();
   return pages;
 }
 
 export async function getPageBySlug(slug: string): Promise<Page> {
   const url = getUrl("/wp-json/wp/v2/pages", { slug });
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 120 } });
   const page: Page[] = await response.json();
   return page[0];
 }
 
 export async function getFeaturedMediaById(id: number): Promise<FeaturedMedia> {
   const url = getUrl(`/wp-json/wp/v2/media/${id}`);
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 120 } });
   const featuredMedia: FeaturedMedia = await response.json();
   return featuredMedia;
 }
 
 export async function getAllTags(): Promise<Tag[]> {
   const url = getUrl("/wp-json/wp/v2/tags");
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 120 } });
   const tags: Tag[] = await response.json();
   return tags;
 }
@@ -64,7 +64,7 @@ export async function getAllTags(): Promise<Tag[]> {
 export async function getTagsByIds(ids: number[]): Promise<Tag[]> {
   const idString = ids.join(","); // Convert array of IDs to a comma-separated string
   const url = getUrl("/wp-json/custom/v1/tags", { ids: idString });
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 120 } });
   const tags: Tag[] = await response.json();
   return tags;
 }
