@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="nl">
       <Script
         defer
-        src="https://umami.panel.stanturner-dev.nl/script.js"
+        src="https://umami.stanturner-dev.nl/script.js"
         data-website-id="85ed2e65-b709-44e4-830a-c8757498ccb6"
       ></Script>
       <body className="antialiased min-h-dvh relative container">
