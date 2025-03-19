@@ -56,9 +56,9 @@ export default async function About() {
           <p>
             Op dit moment zit ik in het 2e jaar van mijn opleiding. Ik heb tot
             nu toe voornamelijk ervaring met HTML, CSS, NextJS en Tailwind.
-            Daarnaast heb ik wat basiskennis van JavaScript, PHP en MySQL. Ik
-            heb een sterke voorkeur voor front-end development, maar ik vind het
-            ook zeker leuk om te leren over de rest!
+            Daarnaast heb ik wat basiskennis van PHP en MySQL. Ik heb een sterke
+            voorkeur voor front-end development, maar ik vind het ook zeker leuk
+            om te leren over de rest!
           </p>
         </div>
 
