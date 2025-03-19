@@ -40,12 +40,12 @@ export default async function About() {
         <div className="flex flex-col gap-1 lg:col-span-2">
           <p className="text-2xl font-bold">Wie ben ik?</p>
           <p>
-            Hoi! Ik ben Pebbles de Vries, een 21 jarige Web Development
-            studente. Ik woon in de randstad, en ga naar school op het Grafisch
-            Lyceum in Utrecht. Ook buiten school om vind ik het leuk om bezig te
-            zijn met nieuwe projecten en technologieën om mijn vaardigheden te
-            verbeteren. Ik doe op dit moment mijn opleiding versneld en ik zal
-            deze dus afronden in 3 jaar in plaats van de standaard 4!
+            Hoi! Ik ben Pebbles de Vries, een 21 jarige Web Development student.
+            Ik woon in de randstad, en ga naar school op het Grafisch Lyceum in
+            Utrecht. Ook buiten school om vind ik het leuk om bezig te zijn met
+            nieuwe projecten en technologieën om mijn vaardigheden te
+            verbeteren. Ik doe mijn opleiding versneld, wat inhoud dat ik alles
+            binnen 3 jaar zal afronden in plaats van de standaard 4!
           </p>
         </div>
       </div>
@@ -55,10 +55,10 @@ export default async function About() {
           <p className="text-2xl font-bold">Wat doe/kan ik?</p>
           <p>
             Op dit moment zit ik in het 2e jaar van mijn opleiding. Ik heb tot
-            nu toe voornamelijk ervaring met HTML, CSS, NextJS en Tailwind, maar
-            ook beginnend met JavaScript, PHP en MySQL. Ik heb een voorkeur voor
-            front-end development, maar ik vind het ook zeker leuk om te leren
-            over de rest!
+            nu toe voornamelijk ervaring met HTML, CSS, NextJS en Tailwind.
+            Daarnaast heb ik wat basiskennis van JavaScript, PHP en MySQL. Ik
+            heb een sterke voorkeur voor front-end development, maar ik vind het
+            ook zeker leuk om te leren over de rest!
           </p>
         </div>
 
