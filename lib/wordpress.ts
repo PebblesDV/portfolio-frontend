@@ -55,7 +55,7 @@ export async function getFeaturedMediaById(id: number): Promise<FeaturedMedia> {
 }
 
 export async function getAllTags(): Promise<Tag[]> {
-  const url = getUrl("/wp-json/wp/v2/tags");
+  const url = getUrl("/wp-json/wp/v2/tags?per_page=30");
   const response = await fetch(url, { next: { revalidate: 120 } });
   const tags: Tag[] = await response.json();
   return tags;
