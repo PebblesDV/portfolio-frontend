@@ -25,9 +25,9 @@ const links = [
     image: "/mail.svg",
   },
   {
-    social: "+31 6 50 87 80 66",
-    href: "tel:+31650878066",
-    image: "/phone.svg",
+    social: "PebblesDV",
+    href: "https://github.com/PebblesDV",
+    image: "/github.svg",
   },
 ];
 
@@ -72,6 +72,7 @@ export default async function Contact() {
               <Link
                 key={link.social}
                 href={link.href}
+                target="_blank"
                 className="flex text-sm lg:text-base gap-3 group border-b border-transparent lg:hover:border-white transition duration-200 w-fit"
               >
                 <Image
