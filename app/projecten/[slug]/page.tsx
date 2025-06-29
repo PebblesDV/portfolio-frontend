@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { getFullImageUrl, getProjectById } from "@/lib/strapi";
 import Tag from "@/app/components/tag";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Project",
@@ -61,33 +62,53 @@ export default async function projectDetail({
       </div>
 
       {project.data.TextBlock.length > 1 &&
-        project.data.TextBlock.slice(1).map((item: any) => {
-          return (
-            <div
-              key={item.id}
-              className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 px-5 lg:px-16 items-center"
-            >
-              {item.Image && (
-                <Image
-                  src={getFullImageUrl(item.Image.url)}
-                  alt="project"
-                  width={0}
-                  height={0}
-                  className="w-full rounded-2xl"
-                  sizes="100vw"
-                  style={{ objectFit: "cover", height: "250px" }}
-                />
-              )}
+        project.data.TextBlock.slice(1).map(
+          (
+            item: {
+              id: string;
+              Title: string;
+              Description: string;
+              Image: { url: string } | null;
+            },
+            index: number
+          ) => {
+            const isEven = index % 2 == 0;
+            console.log(isEven);
 
-              <div className="flex flex-col gap-1 lg:col-span-2 prose prose-invert prose-h2:m-0">
-                <div className="flex flex-col gap-1">
-                  <h2>{item.Title}</h2>
-                  <p>{item.Description}</p>
+            return (
+              <div
+                key={item.id}
+                className={
+                  "grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 px-5 lg:px-16 items-center"
+                }
+              >
+                {item.Image && (
+                  <Image
+                    src={getFullImageUrl(item.Image.url)}
+                    alt="project"
+                    width={0}
+                    height={0}
+                    className="w-full rounded-2xl"
+                    sizes="100vw"
+                    style={{ objectFit: "cover", height: "250px" }}
+                  />
+                )}
+
+                <div
+                  className={clsx(
+                    "flex flex-col gap-1 lg:col-span-2 prose prose-invert prose-h2:m-0",
+                    !isEven && "-order-1"
+                  )}
+                >
+                  <div className="flex flex-col gap-1">
+                    <h2>{item.Title}</h2>
+                    <p>{item.Description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          }
+        )}
     </main>
   );
 }
