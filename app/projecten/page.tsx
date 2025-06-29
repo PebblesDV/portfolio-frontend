@@ -1,7 +1,11 @@
-import { getAllProjects, getFeaturedMediaById } from "@/lib/wordpress";
+import {
+  getAllProjects as oldGetAllProjects,
+  getFeaturedMediaById,
+} from "@/lib/wordpress";
 import { Metadata } from "next";
 import Card from "../components/card";
 import FallBackImage from "@/public/code.webp";
+import { getAllProjects } from "@/lib/strapi";
 
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Projecten",
@@ -19,11 +23,15 @@ export const metadata: Metadata = {
 };
 
 export default async function Projects() {
+  const oldProjects = await oldGetAllProjects();
   const projects = await getAllProjects();
+
+  console.log(JSON.stringify(projects, null, 2));
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7 py-12">
-      {projects.length > 0 &&
-        projects.map(async (project) => {
+      {oldProjects.length > 0 &&
+        oldProjects.map(async (project) => {
           const media =
             project && project.acf && project.acf.card_image
               ? typeof project.acf.card_image === "string"
