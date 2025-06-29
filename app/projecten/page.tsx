@@ -20,10 +20,6 @@ export const metadata: Metadata = {
 export default async function Projects() {
   const projects = await getAllProjects();
 
-  console.log(getFullImageUrl(projects.data[0].Cover.url));
-  console.log(projects.data[0].documentId);
-  console.log(projects.data[0].Title);
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7 py-12">
       {projects.data.length > 0 &&

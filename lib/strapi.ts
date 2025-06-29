@@ -15,3 +15,19 @@ export const getAllProjects = async () => {
   const allProjects = await projects.find({ populate: "*" });
   return allProjects;
 };
+
+export const getProjectById = async (documentId: string) => {
+  const project = await projects.findOne(documentId, {
+    populate: {
+      Cover: true,
+      Banner: true,
+      Tag: true,
+      TextBlock: {
+        populate: {
+          Image: true,
+        },
+      },
+    },
+  });
+  return project;
+};
