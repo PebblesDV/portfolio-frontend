@@ -1,4 +1,4 @@
-import { getAllProjects } from "@/lib/wordpress";
+import { getAllProjects } from "@/lib/strapi";
 import type { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -6,10 +6,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const projects = await getAllProjects();
 
-  const projectPages: MetadataRoute.Sitemap = projects.map((project) => {
+  const projectPages: MetadataRoute.Sitemap = projects.data.map((project) => {
+    console.log(project);
     return {
-      url: `${BASE_URL}/projecten/${project.slug}`,
-      lastModified: new Date(project.modified) || new Date(),
+      url: `${BASE_URL}/projecten/${project.documentId}`,
+      lastModified: new Date(project.updatedAt) || new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     };

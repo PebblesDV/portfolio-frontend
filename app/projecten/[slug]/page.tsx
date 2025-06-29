@@ -73,7 +73,6 @@ export default async function projectDetail({
             index: number
           ) => {
             const isEven = index % 2 == 0;
-            console.log(isEven);
 
             return (
               <div

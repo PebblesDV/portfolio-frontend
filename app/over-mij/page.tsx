@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Tag from "../components/tag";
 import FotoPebbles from "@/public/pebbles.jpeg";
-import { getAllTags } from "@/lib/wordpress";
 import { Metadata } from "next";
+import { getAboutTags } from "@/lib/strapi";
 
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Over mij",
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default async function About() {
-  const tags = await getAllTags();
+  const tags = await getAboutTags();
+  console.log(tags);
   return (
     <main className="flex self-center flex-1 justify-center flex-col gap-10 lg:gap-24 py-5 px-5 lg:px-32">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 items-center">
@@ -63,10 +64,9 @@ export default async function About() {
         </div>
 
         <div className="flex gap-2 flex-wrap h-fit">
-          {tags.length > 0 &&
-            tags.map((tag) => {
-              console.log(tag);
-              return <Tag title={tag.name} key={tag.id} />;
+          {tags.data.Tags.length > 0 &&
+            tags.data.Tags.map((tag: { Tag: string; id: string }) => {
+              return <Tag title={tag.Tag} key={tag.id} />;
             })}
         </div>
       </div>

@@ -10,6 +10,7 @@ export const getFullImageUrl = (path: string) => {
 };
 
 const projects = client.collection("projects");
+const about = client.single("about");
 
 export const getAllProjects = async () => {
   const allProjects = await projects.find({ populate: "*" });
@@ -30,4 +31,9 @@ export const getProjectById = async (documentId: string) => {
     },
   });
   return project;
+};
+
+export const getAboutTags = async () => {
+  const tags = await about.find({ populate: "*" });
+  return tags;
 };
