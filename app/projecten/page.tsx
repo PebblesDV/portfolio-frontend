@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Card from "../components/card";
 import { getAllProjects, getFullImageUrl } from "@/lib/strapi";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Projecten",
   description: "Student Web Development in Aalsmeer - Noord-Holland",

@@ -4,6 +4,8 @@ import { getFullImageUrl, getProjectById } from "@/lib/strapi";
 import Tag from "@/app/components/tag";
 import clsx from "clsx";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Project",
   description: "Student Web Development in Aalsmeer - Noord-Holland",

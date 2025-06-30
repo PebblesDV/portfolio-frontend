@@ -4,6 +4,8 @@ import FotoPebbles from "@/public/pebbles.jpeg";
 import { Metadata } from "next";
 import { getAboutTags } from "@/lib/strapi";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export const metadata: Metadata = {
   title: "Pebbles de Vries - Over mij",
   description: "Student Web Development in Aalsmeer - Noord-Holland",
