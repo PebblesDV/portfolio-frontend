@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "admin.pebblesdevries.nl",
       },
+      {
+        protocol: "https",
+        hostname: "strapi.pebblesdevries.nl",
+      },
     ],
   },
 };
