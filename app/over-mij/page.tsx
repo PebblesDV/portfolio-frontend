@@ -43,7 +43,7 @@ export default async function About() {
         <div className="flex flex-col gap-1 lg:col-span-2">
           <p className="text-2xl font-bold">Wie ben ik?</p>
           <p>
-            Hoi! Ik ben Pebbles de Vries, een 21 jarige Web Development student.
+            Hoi! Ik ben Pebbles de Vries, een 22 jarige Web Development student.
             Ik woon in de randstad, en ga naar school op het Grafisch Lyceum in
             Utrecht. Ook buiten school om vind ik het leuk om bezig te zijn met
             nieuwe projecten en technologieën om mijn vaardigheden te
